@@ -23,7 +23,7 @@ const app = new Origami({
         "type": "mongodb",
         "host": "localhost",
         "port": "27017",
-        "database": "origami-media-plugin-test",
+        "database": "origami-plugin-media-test",
         "username": "origami",
         "password": "origami"
     },
