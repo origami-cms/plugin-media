@@ -1,4 +1,4 @@
-db = db.getSiblingDB('origami-media-plugin-test');
+db = db.getSiblingDB('origami-plugin-media-test');
 
 db.createUser({
     user: "origami",
