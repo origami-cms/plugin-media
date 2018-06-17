@@ -1,4 +1,8 @@
 # Origami: Media Plugin
+[![npm](https://img.shields.io/npm/v/origami-plugin-media.svg)](http://npmjs.com/package/origami-plugin-media)
+[![Travis](https://img.shields.io/travis/origami-cms/plugin-media.svg)](https://travis-ci.org/origami-cms/plugin-media)
+[![Codecov](https://img.shields.io/codecov/c/github/origami-cms/plugin-media.svg)](https://codecov.io/gh/origami-cms/plugin-media)
+
 This plugin provides functionality to upload and serve media in Origami CMS. It's one of the core plugins bundled with Origami.
 
 ## Installation
