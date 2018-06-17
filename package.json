@@ -12,7 +12,8 @@
     "db:reset": "yarn db:clear; yarn db:init",
     "test:clean-media": "rm -rf ./test/media/",
     "test": "yarn test:clean-media; yarn db:reset; mocha --exit",
-    "build": "tsc"
+    "build": "tsc",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
     "mkdir-recursive": "^0.4.0",
@@ -23,7 +24,9 @@
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "chai-http": "^4.0.0",
+    "codecov": "^3.0.2",
     "mocha": "^5.2.0",
+    "nyc": "^12.0.2",
     "origami-cms": "^0.2.10",
     "tslint": "^5.10.0",
     "tslint-config-origami": "^1.0.3",
