@@ -16,9 +16,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
-    "mkdir-recursive": "^0.4.0",
-    "origami-core-lib": "^0.3.5",
-    "origami-core-server": "^0.3.13"
+    "mkdir-recursive": "^0.4.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -27,7 +25,9 @@
     "codecov": "^3.0.2",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
-    "origami-cms": "^0.2.10",
+    "origami-cms": "^0.2.11",
+    "origami-core-lib": "^0.3.5",
+    "origami-core-server": "^0.4.0",
     "tslint": "^5.10.0",
     "tslint-config-origami": "^1.0.3",
     "typescript": "^2.9.2"
