@@ -11,7 +11,7 @@
     "db:clear": "mongo db-scripts/clear.js",
     "db:reset": "yarn db:clear; yarn db:init",
     "test:clean-media": "rm -rf ./test/media/",
-    "test": "yarn test:clean-media; yarn db:reset; mocha --exit",
+    "test": "yarn test:clean-media; yarn db:reset; nyc mocha --exit",
     "build": "tsc",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
