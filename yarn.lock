@@ -2673,15 +2673,15 @@ origami-bird@^1.0.0:
   dependencies:
     colors "^1.1.2"
 
-origami-cms@^0.2.11:
-  version "0.2.11"
-  resolved "https://registry.yarnpkg.com/origami-cms/-/origami-cms-0.2.11.tgz#5b5036cfc96b6b08ab3e11d7b74831755a8f92f9"
+origami-cms@^0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/origami-cms/-/origami-cms-0.2.12.tgz#f6b046b2e2608cd09c0ce4f8f0b4b10bd2c6da1e"
   dependencies:
     express "^4.16.2"
     origami-admin-zen "^0.0.9"
     origami-bird "^1.0.0"
     origami-core-lib "^0.3.5"
-    origami-core-server "^0.4.0"
+    origami-core-server "^0.4.1"
     origami-store-mongodb "^0.1.2"
     origami-theme-snow "^0.0.3"
 
@@ -2729,9 +2729,9 @@ origami-core-server@^0.3.7:
     request-promise-native "^1.0.5"
     routington "^1.0.3"
 
-origami-core-server@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.4.0.tgz#f28d69609432c309a2e9df904c80b8911ac7ca1e"
+origami-core-server@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/origami-core-server/-/origami-core-server-0.4.1.tgz#5a0eadffcf71ed58b81e6e9f45e2e6a460dadc34"
   dependencies:
     bcrypt "^2.0.1"
     colors "^1.1.2"
@@ -2751,12 +2751,28 @@ origami-core-server@^0.4.0:
     origami-core-lib "^0.3.5"
     origami-core-server "^0.3.7"
     origami-core-server-statuses "^0.0.8"
+    origami-plugin-media "^1.0.1"
+    origami-plugin-user-profiles "^1.0.0"
     osprey "^0.5.0"
     pluralize "^7.0.0"
     recursive-readdir "^2.2.1"
     request "^2.85.0"
     request-promise-native "^1.0.5"
     routington "^1.0.3"
+
+origami-plugin-media@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/origami-plugin-media/-/origami-plugin-media-1.0.1.tgz#cb2b32162bd6274deab98cd411c0cbc9058d5ff1"
+  dependencies:
+    mkdir-recursive "^0.4.0"
+
+origami-plugin-user-profiles@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/origami-plugin-user-profiles/-/origami-plugin-user-profiles-1.0.0.tgz#bab43ff2ab7db0f4a7b2d365468a5d1e8464b160"
+  dependencies:
+    md5 "^2.2.1"
+    mkdir-recursive "^0.4.0"
+    request "^2.87.0"
 
 origami-store-mongodb@^0.1.2:
   version "0.1.2"
@@ -3342,7 +3358,7 @@ request-promise-native@^1.0.5:
     stealthy-require "^1.1.0"
     tough-cookie ">=2.3.3"
 
-request@^2.81.0, request@^2.85.0:
+request@^2.81.0, request@^2.85.0, request@^2.87.0:
   version "2.87.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.87.0.tgz#32f00235cd08d482b4d0d68db93a829c0ed5756e"
   dependencies:

@@ -32,6 +32,8 @@ const app = new Origami({
         "secret": "37054f5ec40817ce0273769599fe4cf7"
     },
     "plugins": {
+        // Disable default media bundled in core-server
+        "media": false,
         "./build/index": {
             "location": "./test/media"
         }
