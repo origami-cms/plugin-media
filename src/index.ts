@@ -1,10 +1,10 @@
-import path from 'path';
-const {mkdir: mkdirAsync} = require('mkdir-recursive');
 import fs from 'fs';
-import {promisify} from 'util';
-import Server, {Route} from 'origami-core-server';
-import Media from './models/media';
 import {Origami} from 'origami-core-lib';
+import Server from 'origami-core-server';
+import path from 'path';
+import {promisify} from 'util';
+import Media from './models/media';
+const {mkdir: mkdirAsync} = require('mkdir-recursive');
 
 const writeFile = promisify(fs.writeFile);
 const stat = promisify(fs.stat);
@@ -42,9 +42,9 @@ module.exports = async(server: Server, options: PluginOptions) => {
         },
         controllers: {
             create: async(req: req, res, next) => {
-                if (!req.files || !req.files.file) return next(new Error('No files uploaded'));
+                if (!req.files) return next(new Error('No files uploaded'));
 
-                const {file} = req.files;
+                const [, file] = Object.entries(req.files)[0];
 
                 const m = server.store.model('media');
 
