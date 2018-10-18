@@ -1,0 +1,5 @@
+{
+    "src": {
+        "commitMessage": "build: release v%s"
+    }
+}
