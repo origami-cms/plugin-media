@@ -13,7 +13,6 @@ let location: string;
 
 export const initialize = async (options: PluginOptionsFileSystem) => {
     location = path.resolve(process.cwd(), options.location || 'media');
-    console.log('got to create handler', location);
 
     try {
         await stat(location);
@@ -40,8 +39,6 @@ export const handlerCreate = (
 ): Origami.Server.RequestHandler =>
 
     async (req: req, res, next) => {
-        console.log('got to create handler', location);
-
         if (!req.files) return next(new Error('No files uploaded'));
 
         const [, file] = Object.entries(req.files)[0];

@@ -16,6 +16,7 @@
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "dependencies": {
+    "aws-sdk": "^2.337.0",
     "mkdir-recursive": "^0.4.0"
   },
   "devDependencies": {
