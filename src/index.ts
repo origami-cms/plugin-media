@@ -50,10 +50,12 @@ module.exports = async(server: Server, options: PluginOptions) => {
             provider = ProviderS3;
             break;
 
-        default:
         case 'filesystem':
             provider = ProviderFilesystem;
             break;
+
+        default:
+            throw new Error(`Media provider ${options.provider} is not valid. Please use 's3' or 'filesystem'`);
     }
 
     await provider.initialize(options);
