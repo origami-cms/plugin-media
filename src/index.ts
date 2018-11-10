@@ -1,4 +1,4 @@
-import {Origami} from 'origami-core-lib';
+import {Origami, error} from 'origami-core-lib';
 import Server from 'origami-core-server';
 import Media from './models/media';
 
@@ -43,7 +43,7 @@ export interface MediaPostReq extends Origami.Server.Request {
 
 
 module.exports = async(server: Server, options: PluginOptions) => {
-
+    if (!server.store) return error('Plugin media requires a store to function');
     let provider: Provider<PluginOptions>;
     switch (options.provider) {
         case 's3':
