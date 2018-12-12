@@ -1,9 +1,7 @@
-import {Origami, error} from 'origami-core-lib';
-import Server from 'origami-core-server';
+import {error, Origami, Server} from '@origami/core';
 import Media from './models/media';
-
-import * as ProviderS3 from './providers/s3';
 import * as ProviderFilesystem from './providers/filesystem';
+import * as ProviderS3 from './providers/s3';
 
 
 export type ProviderTypes = 's3' | 'filesystem';
@@ -63,7 +61,13 @@ module.exports = async(server: Server, options: PluginOptions) => {
 
     server.resource('media', {
         model: Media,
-        auth: {get: false},
+        auth: {
+            list: true,
+            create: true,
+            update: true,
+            delete: true,
+            get: false
+        },
         controllers: {
             create: provider.handlerCreate(options),
             get: provider.handlerGet(options)

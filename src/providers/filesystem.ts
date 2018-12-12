@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import {promisify} from 'util';
 import {PluginOptionsFileSystem} from '../';
-import {Origami} from 'origami-core-lib';
+import {Origami} from '@origami/core';
 
 const {mkdir: mkdirAsync} = require('mkdir-recursive');
 const writeFile = promisify(fs.writeFile);
@@ -55,7 +55,7 @@ export const handlerCreate = (
 
             const fp = path.resolve(location, data.id);
             writeFile(fp, file.data);
-            res.data = data;
+            res.locals.content.set(data);
 
             next();
         } catch (e) {
@@ -76,7 +76,7 @@ export const handlerGet = (
         }
         const file = await m.find({id: req.params.mediaId}) as MediaResource;
         if (!file) {
-            res.responseCode = 'resource.errors.notFound';
+            res.locals.responseCode = 'resource.errors.notFound';
             return next();
         }
         res.header('content-type', file.type);
