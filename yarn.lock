@@ -215,28 +215,11 @@
     tslib "^1.8.1"
     tsutils "^3.1.0"
 
-"@fimbul/bifrost@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@fimbul/bifrost/-/bifrost-0.9.0.tgz#75c7d7ad0c5464f22603b715324ec89c1f50138f"
-  dependencies:
-    "@fimbul/ymir" "^0.9.0"
-    get-caller-file "^1.0.2"
-    tslib "^1.8.1"
-    tsutils "^2.24.0"
-
 "@fimbul/ymir@^0.15.0":
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/@fimbul/ymir/-/ymir-0.15.0.tgz#944c881b14fadf7b43d1ae00b445e42261bb407f"
   dependencies:
     inversify "^5.0.0"
-    reflect-metadata "^0.1.12"
-    tslib "^1.8.1"
-
-"@fimbul/ymir@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@fimbul/ymir/-/ymir-0.9.0.tgz#64bb9c658a48b584c070e830911c3675dc8e81da"
-  dependencies:
-    inversify "^4.10.0"
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
@@ -305,7 +288,7 @@
     npm-programmatic "^0.0.10"
     request-promise-native "^1.0.5"
 
-"@origami/tslint-config@0.0.3-alpha.3":
+"@origami/tslint-config@0.0.3-alpha.3", "@origami/tslint-config@^0.0.3-alpha.3":
   version "0.0.3-alpha.3"
   resolved "https://registry.yarnpkg.com/@origami/tslint-config/-/tslint-config-0.0.3-alpha.3.tgz#9543c590f40c05cd66cb27a8b47e858fb8bfa9cb"
   dependencies:
@@ -1518,7 +1501,7 @@ gauge@~2.7.3:
     strip-ansi "^3.0.1"
     wide-align "^1.1.0"
 
-get-caller-file@^1.0.1, get-caller-file@^1.0.2:
+get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
@@ -1811,10 +1794,6 @@ invariant@^2.2.0:
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   dependencies:
     loose-envify "^1.0.0"
-
-inversify@^4.10.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/inversify/-/inversify-4.13.0.tgz#0ab40570bfa4474b04d5b919bbab3a4f682a72f5"
 
 inversify@^5.0.0:
   version "5.0.1"
@@ -3694,33 +3673,9 @@ tslint-config-airbnb@^5.11.0:
     tslint-eslint-rules "^5.4.0"
     tslint-microsoft-contrib "~5.2.1"
 
-tslint-config-airbnb@^5.8.0:
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/tslint-config-airbnb/-/tslint-config-airbnb-5.9.2.tgz#fdb37a695ec09b663d5ee92e7852a7a9337ec44c"
-  dependencies:
-    tslint-consistent-codestyle "^1.10.0"
-    tslint-eslint-rules "^5.3.1"
-    tslint-microsoft-contrib "~5.0.1"
-
-tslint-config-origami@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/tslint-config-origami/-/tslint-config-origami-1.0.3.tgz#95cf3f341ea75de299f28800078c5ed3da758226"
-  dependencies:
-    tslint "^5.9.1"
-    tslint-config-airbnb "^5.8.0"
-    typescript "^2.7.2"
-
 tslint-config-prettier@^1.17.0:
   version "1.17.0"
   resolved "https://registry.yarnpkg.com/tslint-config-prettier/-/tslint-config-prettier-1.17.0.tgz#946ed6117f98f3659a65848279156d87628c33dc"
-
-tslint-consistent-codestyle@^1.10.0:
-  version "1.13.1"
-  resolved "https://registry.yarnpkg.com/tslint-consistent-codestyle/-/tslint-consistent-codestyle-1.13.1.tgz#7996913453f369f7321c5b49776c2bcf837461aa"
-  dependencies:
-    "@fimbul/bifrost" "^0.9.0"
-    tslib "^1.7.1"
-    tsutils "^2.27.0"
 
 tslint-consistent-codestyle@^1.14.1:
   version "1.14.1"
@@ -3730,14 +3685,6 @@ tslint-consistent-codestyle@^1.14.1:
     tslib "^1.7.1"
     tsutils "^2.29.0"
 
-tslint-eslint-rules@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/tslint-eslint-rules/-/tslint-eslint-rules-5.3.1.tgz#10dec4361df0b3e4385d91ff8e0226bda4ec2ad4"
-  dependencies:
-    doctrine "0.7.2"
-    tslib "1.9.0"
-    tsutils "2.8.0"
-
 tslint-eslint-rules@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/tslint-eslint-rules/-/tslint-eslint-rules-5.4.0.tgz#e488cc9181bf193fe5cd7bfca213a7695f1737b5"
@@ -3746,19 +3693,13 @@ tslint-eslint-rules@^5.4.0:
     tslib "1.9.0"
     tsutils "^3.0.0"
 
-tslint-microsoft-contrib@~5.0.1:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/tslint-microsoft-contrib/-/tslint-microsoft-contrib-5.0.3.tgz#6fc3e238179cd72045c2b422e4d655f4183a8d5c"
-  dependencies:
-    tsutils "^2.12.1"
-
 tslint-microsoft-contrib@~5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/tslint-microsoft-contrib/-/tslint-microsoft-contrib-5.2.1.tgz#a6286839f800e2591d041ea2800c77487844ad81"
   dependencies:
     tsutils "^2.27.2 <2.29.0"
 
-tslint@^5.10.0, tslint@^5.9.1:
+tslint@^5.10.0:
   version "5.10.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.10.0.tgz#11e26bccb88afa02dd0d9956cae3d4540b5f54c3"
   dependencies:
@@ -3775,13 +3716,7 @@ tslint@^5.10.0, tslint@^5.9.1:
     tslib "^1.8.0"
     tsutils "^2.12.1"
 
-tsutils@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.8.0.tgz#0160173729b3bf138628dd14a1537e00851d814a"
-  dependencies:
-    tslib "^1.7.1"
-
-tsutils@^2.12.1, tsutils@^2.24.0, tsutils@^2.27.0:
+tsutils@^2.12.1:
   version "2.27.1"
   resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.27.1.tgz#ab0276ac23664f36ce8fd4414daec4aebf4373ee"
   dependencies:
@@ -3826,7 +3761,7 @@ type-is@~1.6.15, type-is@~1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.18"
 
-typescript@^2.7.2, typescript@^2.9.2:
+typescript@^2.9.2:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
